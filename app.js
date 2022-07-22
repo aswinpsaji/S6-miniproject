@@ -256,12 +256,7 @@ app.use('/',(req,res)=>{
    res.render('index',{success: ''});
 });
 
-<<<<<<< HEAD
-mongoose.connect('mongodb+srv://mongo:jonathan@cluster0.2uncw.mongodb.net/test2?retryWrites=true&w=majority')
-// mongoose.connect('mongodb+srv://roshan:roshan@searchbook.9bw1f7a.mongodb.net/first?retryWrites=true&w=majority')
-.then(()=>{
-  
-   app.listen(3000);
+
 =======
 mongoose.connect('mongodb+srv://mongo:jonathan@cluster0.2uncw.mongodb.net/test1?retryWrites=true&w=majority')
 // mongoose.connect('mongodb+srv://roshan:roshan@searchbook.9bw1f7a.mongodb.net/first?retryWrites=true&w=majority')
@@ -269,6 +264,6 @@ mongoose.connect('mongodb+srv://mongo:jonathan@cluster0.2uncw.mongodb.net/test1?
    const PORT = process.env.PORT || 3000;
 
    app.listen(PORT);
->>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
+
    console.log("Mongodb live");})
 .catch(result=>{console.log('error');});
