@@ -38,11 +38,8 @@ app.use(express.json());
 app.set('view engine','ejs');
 // app.set('views', path.join(__dirname, 'views'));
 
-<<<<<<< HEAD
-=======
 require('dotenv').config()
 
->>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
 app.use(bp.urlencoded({extended:false}));
 
 
@@ -95,14 +92,13 @@ app.post('/save',(req,res,)=>{
      });
 });
 
-<<<<<<< HEAD
+
 
 app.get('/gettopic/:topic',(req,res)=>{
    
    
    const parcel= req.params.topic;
    console.log('parcel ',parcel);
-=======
 app.get('/gettopic',(req,res)=>{
 
    con.find().then(c=>{
@@ -121,7 +117,7 @@ app.get('/gettopic/:topic',(req,res)=>{
    
    const {parcel}= req.params.topic;
    console.log(parcel);
->>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
+
    con.updateMany({},{"$set":{selected:false}})
    .then(c=>{
       con.findOneAndUpdate({topic: parcel},{selected: true})
@@ -143,7 +139,6 @@ app.get('/gettopic/:topic',(req,res)=>{
 
 });
 
-<<<<<<< HEAD
 app.get('/gettopic',(req,res)=>{
 
    con.find().then(c=>{
@@ -159,8 +154,7 @@ app.get('/gettopic',(req,res)=>{
 });
 
 
-=======
->>>>>>> b7209b44fd93f0f081d89d600d98af8cf6d89c17
+
 
 //pdf logic goes here
 app.get('/pdfmytopics',(req,res)=>{
@@ -256,8 +250,6 @@ app.use('/',(req,res)=>{
    res.render('index',{success: ''});
 });
 
-
-=======
 mongoose.connect('mongodb+srv://mongo:jonathan@cluster0.2uncw.mongodb.net/test1?retryWrites=true&w=majority')
 // mongoose.connect('mongodb+srv://roshan:roshan@searchbook.9bw1f7a.mongodb.net/first?retryWrites=true&w=majority')
 .then(()=>{
